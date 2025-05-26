@@ -1,3 +1,39 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+ 
+ int maxProduct(vector<int> arr) {
+        // code here
+        int n = arr.size();
+
+        if (n<3) return 0;
+        
+        sort(arr.begin(), arr.end());
+        
+        int prod1 = arr[n-3]*arr[n-1]*arr[n-2];
+        
+        int prod2 = arr[0]*arr[1]*arr[n-1];
+        
+        return max(prod1, prod2);
+    }
+
+
+
+int main(){
+
+    vector<int> arr = {1,2,3,4,5,8,6,90,1,-80,-100};
+
+    int result = maxProduct(arr);
+
+    cout<<result;
+
+    return 0;
+}
+
+
+
 // int maxProduct(vector<int> arr) {
 //     // code here
 //     int n = arr.size();
@@ -57,3 +93,7 @@
 // maxProduct = max(largest*secondLargest*thirdLargest , smallest*secondSmallest*largest);
 // return maxProduct;
 // }
+
+
+
+
