@@ -14,3 +14,9 @@
 // size()              Returns the number of elements in the stack.
 // empty()             Checks if the stack is empty.
 // swap()              Swap two stacks.
+
+
+
+
+// stack<type> myStack2(myStack1);     // copy constructor
+// myStack2  = myStack1      // copy assignment operator
